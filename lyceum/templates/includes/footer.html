@@ -1,0 +1,20 @@
+{% load static %}
+<footer class="bg-dark mt-auto">
+    <div class="container">
+      <div class="py-3">
+        <p class="text-center text-secondary mb-0">&copy; <span id="year">{% now "Y" %}</span> supersupersite</p>
+      </div>
+    </div>
+    <script type="text/javascript" src={% static "js/jquery-3.7.1.min.js" %} ></script>
+    <script>
+      var dateStr = "{% now "Y-m-d" %}T{% now "H:i:s" %}Z";
+      var serverDate = Date.parse(dateStr);
+      var now = Date.now();
+      var diffTime = Math.abs(serverDate - now);
+      var diffDays = Math.ceil(diffTime / (1600 * 60 * 60 * 24));
+      
+      var date = new Date(diffDays < 1 ? now : serverDate);
+      
+      $("#year").text(date.getFullYear());
+    </script>
+</footer>

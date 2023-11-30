@@ -1,0 +1,130 @@
+[
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 1,
+        "fields": {
+            "name": "test1",
+            "image": "test_images/white.png"
+        }
+    },
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 2,
+        "fields": {
+            "name": "test2",
+            "image": "test_images/white_8t0A63t.png"
+        }
+    },
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 3,
+        "fields": {
+            "name": "test3",
+            "image": "test_images/white_ONEQsnF.png"
+        }
+    },
+    {
+        "model": "catalog.tag",
+        "pk": 1,
+        "fields": {
+            "name": "test-published",
+            "is_published": true,
+            "slug": "test-tag-slug-published",
+            "normalization": "тестпублишед"
+        }
+    },
+    {
+        "model": "catalog.tag",
+        "pk": 2,
+        "fields": {
+            "name": "test-unpublished",
+            "is_published": true,
+            "slug": "test-tag-slug-unpublished",
+            "normalization": "тестунпублишед"
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 1,
+        "fields": {
+            "name": "test1",
+            "is_published": true,
+            "slug": "test1",
+            "normalization": "тест1",
+            "weight": 100
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 2,
+        "fields": {
+            "name": "test2",
+            "is_published": true,
+            "slug": "test2",
+            "normalization": "тест2",
+            "weight": 100
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 3,
+        "fields": {
+            "name": "test3",
+            "is_published": true,
+            "slug": "test3",
+            "normalization": "тест3",
+            "weight": 100
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 1,
+        "fields": {
+            "name": "test-published1",
+            "is_published": true,
+            "is_on_main": true,
+            "main_image": 1,
+            "category": 1,
+            "text": "<p>test&nbsp;превосходно</p>",
+            "created": "2023-11-04T17:44:31.123Z",
+            "updated": "2023-11-04T17:47:30.511Z",
+            "tags": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 2,
+        "fields": {
+            "name": "test-published2",
+            "is_published": true,
+            "is_on_main": false,
+            "main_image": 2,
+            "category": 2,
+            "text": "<p>test-published2&nbsp;превосходно</p>",
+            "created": "2023-11-04T17:44:55.933Z",
+            "updated": "2023-11-04T17:47:35.108Z",
+            "tags": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 3,
+        "fields": {
+            "name": "test-unpublished",
+            "is_published": false,
+            "is_on_main": false,
+            "main_image": 3,
+            "category": 3,
+            "text": "<p>test-unpublished&nbsp;превосходно</p>",
+            "created": "2023-11-04T17:45:13.039Z",
+            "updated": "2023-11-04T17:47:41.402Z",
+            "tags": [
+                1
+            ]
+        }
+    }
+]

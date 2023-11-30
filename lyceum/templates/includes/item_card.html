@@ -1,0 +1,19 @@
+<div class="col-md-3 col-sm-6 col-12 mx-4 mb-4">
+  <a class="text-decoration-none" href="{% url 'catalog:item_detail' item.id %}">
+    <div class="card shadow">
+      <div class="card-body">
+        <h3 class="card-title">
+          {{ item.name }}                <!-- Название -->
+        </h3>
+        {{ item.text|striptags|truncatewords_html:10|safe }}    <!-- Текст -->
+        <h5>Категория</h5>
+        <p>{{ item.category.name }}</p>  <!-- Категория -->
+
+        <h5>Теги</h5>
+        {% for tag in item.tags.all %}
+          <p>{{ tag.name }}</p>          <!-- Теги -->
+        {% endfor %}
+      </div>
+    </div>
+  </a>
+</div>

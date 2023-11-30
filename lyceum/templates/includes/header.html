@@ -1,0 +1,41 @@
+{% load static %}
+{% load i18n %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'homepage:homepage' %}">
+      <img src="{% static 'img/favicon.jpeg' %}" height="60" width="60">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav"  >
+      <ul class="navbar-nav">
+        {% with request.resolver_match.view_name as view_name %}
+        <li class="nav-item {% if view_name == 'homepage:homepage' %} active {% endif %}">
+          <a href="{% url 'homepage:homepage' %}" class="nav-link">{% translate "GLAVNAYA" %}</a>
+        </li>
+        <li class="nav-item {% if view_name == 'catalog:item_list' %} active {% endif %}">
+          <a href="{% url 'catalog:item_list' %}" class="nav-link">{% translate "SPISOK_TOVAROV" %}</a>
+        </li>
+        <li class="nav-item {% if view_name == 'about:about' %} active {% endif %}">
+          <a href="{% url 'about:about' %}" class="nav-link">{% translate "ABOUT" %}</a>
+        </li>
+        <li class="nav-item {% if view_name == 'catalog:new' %} active {% endif %}">
+          <a href="{% url 'catalog:new' %}" class="nav-link">{% translate "NEW" %}</a>
+        </li>
+        <li class="nav-item {% if view_name == 'catalog:friday' %} active {% endif %}">
+          <a href="{% url 'catalog:friday' %}" class="nav-link">{% translate "FRIDAY" %}</a>
+        </li>
+        <li class="nav-item {% if view_name == 'catalog:unverified' %} active {% endif %}">
+          <a href="{% url 'catalog:unverified' %}" class="nav-link">{% translate "UNVERIFIED" %}</a>
+        </li>
+        <li class="nav-item {% if view_name == 'feedback:feedback' %} active {% endif %}">
+          <a href="{% url 'feedback:feedback' %}" class="nav-link">{% translate "FEEDBACK" %}</a>
+        </li>
+        {% if request.user.is_staff %}
+          <li class="nav-item">
+            <a href="{% url 'admin:index' %}" class="nav-link">{% translate "ADMIN" %}</a>
+          </li>
+        {% endif %}
+        {% endwith %}
+      </ul>
+    </div>
+  </div>
+</nav>

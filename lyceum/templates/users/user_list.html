@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Список пользователей{% endblock %}
+
+{% block content %}
+<h1>Список пользователей</h1>
+<div class="row">
+  {% for user in users %}
+  <div class="col-md-3 col-sm-6 col-12 mx-4 mb-4">
+    <div class="card shadow">
+      <h4 class="card-title text-center">
+        {{ user.username }}
+      </h4>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

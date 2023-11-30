@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Продробно о {{ item.name }}{% endblock %}  <!-- Название -->
+
+
+{% block content %}
+<h1>Подробно о {{ item.name }}</h1>
+  {% if item.main_image.image %}
+    <div>
+      <img src="{{ item.main_image.image.url }}">  <!-- Главная фотография -->
+      <div>
+        <a class="btn btn-primary" href="{% url 'download:download_image' item.main_image.image %}" download>Скачать изображение</a>
+      </div> 
+    </div>
+  {% endif %}
+  <h2>Категория</h2>
+  <h4>{{ item.category }}</h4>  <!-- Категория -->
+  <h2>Описание</h2>
+  <h4 style="max-width: 100%; word-wrap: break-word;">{{ item.text | safe }}</h4>  <!-- Описание -->
+  <h2>Список тегов:</h2>
+  {% for tag in item.tags.all %}
+    <h4>{{ tag }}</h4>  <!-- Теги -->
+  {% endfor %}
+
+  {% if item.images.all %}
+    <h2>Изображения:</h2>
+  {% endif %}
+  {% for image in item.images.all %}
+    <img src="{{ image.image.url }}">  <!-- Изображения -->
+    <a class="btn btn-primary" href="{% url 'download:download_image' image.image %}" download>Скачать изображение</a>
+  {% endfor %}
+
+  <a href="{% url 'catalog:item_list' %}" class="text-white"><h6>Назад</h6></a>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Echo форма{% endblock %}
+
+{% block content %}
+<h1>Это форма Echo</h1>
+<div class="text-white">
+    <form method="post" action="{% url 'homepage:echo_submit' %}">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="Отправить">
+    </form>
+</div>
+{% endblock %}

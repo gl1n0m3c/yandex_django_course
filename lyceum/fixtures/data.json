@@ -1,0 +1,209 @@
+[
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 9,
+        "fields": {
+            "name": "meme1",
+            "image": "main_images/meme1.jpg"
+        }
+    },
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 10,
+        "fields": {
+            "name": "meme2",
+            "image": "main_images/meme2.jpg"
+        }
+    },
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 11,
+        "fields": {
+            "name": "meme3",
+            "image": "main_images/meme3.jpg"
+        }
+    },
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 12,
+        "fields": {
+            "name": "meme4",
+            "image": "main_images/meme4.jpg"
+        }
+    },
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 13,
+        "fields": {
+            "name": "meme5",
+            "image": "main_images/meme5.jpg"
+        }
+    },
+    {
+        "model": "catalog.mainimagemodel",
+        "pk": 14,
+        "fields": {
+            "name": "meme6",
+            "image": "main_images/meme6.jpg"
+        }
+    },
+    {
+        "model": "catalog.tag",
+        "pk": 4,
+        "fields": {
+            "name": "test-published",
+            "is_published": true,
+            "slug": "test-tag-slug-published",
+            "normalization": "тестпублишед"
+        }
+    },
+    {
+        "model": "catalog.tag",
+        "pk": 5,
+        "fields": {
+            "name": "test-unpublished",
+            "is_published": true,
+            "slug": "test-tag-slug-unpublished",
+            "normalization": "тестунпублишед"
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 6,
+        "fields": {
+            "name": "test1",
+            "is_published": true,
+            "slug": "test1",
+            "normalization": "тест",
+            "weight": 100
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 7,
+        "fields": {
+            "name": "test2",
+            "is_published": true,
+            "slug": "test2",
+            "normalization": "тест2",
+            "weight": 100
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 8,
+        "fields": {
+            "name": "test3",
+            "is_published": true,
+            "slug": "test3",
+            "normalization": "тест3",
+            "weight": 100
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 21,
+        "fields": {
+            "name": "test1",
+            "is_published": true,
+            "is_on_main": false,
+            "main_image": 9,
+            "category": 8,
+            "text": "<p>превосходно test</p>",
+            "created": "2023-11-03T19:11:14.820Z",
+            "updated": "2023-11-03T19:11:14.821Z",
+            "tags": [
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 22,
+        "fields": {
+            "name": "test2",
+            "is_published": true,
+            "is_on_main": true,
+            "main_image": 10,
+            "category": 8,
+            "text": "<p>превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;превосходно&nbsp;</p>",
+            "created": "2023-11-03T19:11:35.275Z",
+            "updated": "2023-11-03T19:13:11.546Z",
+            "tags": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 23,
+        "fields": {
+            "name": "test3",
+            "is_published": true,
+            "is_on_main": true,
+            "main_image": 11,
+            "category": 6,
+            "text": "<p>роскошно&nbsp;роскошно</p>",
+            "created": "2023-11-03T19:11:53.415Z",
+            "updated": "2023-11-03T19:13:11.548Z",
+            "tags": [
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 24,
+        "fields": {
+            "name": "chepchep",
+            "is_published": true,
+            "is_on_main": true,
+            "main_image": 12,
+            "category": 7,
+            "text": "<p>превосходно&nbsp;роскошно</p>",
+            "created": "2023-11-03T19:12:29.544Z",
+            "updated": "2023-11-03T19:12:29.544Z",
+            "tags": [
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 25,
+        "fields": {
+            "name": "qqqqq",
+            "is_published": true,
+            "is_on_main": true,
+            "main_image": 13,
+            "category": 8,
+            "text": "<p>превосходно&nbsp;превосходно</p>",
+            "created": "2023-11-03T19:12:42.324Z",
+            "updated": "2023-11-03T19:13:11.543Z",
+            "tags": [
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 26,
+        "fields": {
+            "name": "key",
+            "is_published": true,
+            "is_on_main": false,
+            "main_image": 14,
+            "category": 6,
+            "text": "<p>превосходно&nbsp;превосходно&nbsp;превосходно</p>",
+            "created": "2023-11-03T19:13:07.861Z",
+            "updated": "2023-11-03T19:13:07.861Z",
+            "tags": [
+                5
+            ]
+        }
+    }
+]

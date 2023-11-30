@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Обратная связь{% endblock %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        {% for file_field in pers %}
+        <div class="text-white">
+            {{ file_field.label_tag }} {{ file_field }}
+            {% if file_field.help_text %}
+                <p class="help">{{ file_field.help_text }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        {% for field in form %}
+        <div class="text-white">
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+                <p class="help">{{ field.help_text }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        {% for file_field in fileform.file %}
+        <div class="text-white">
+            {{ file_field.label_tag }} {{ file_field }}
+            {% if file_field.help_text %}
+                <p class="help">{{ file_field.help_text }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <input type="submit" value="Отправить">
+    </form>
+
+    {% if messages %}
+        <ul class="messages">
+            <div class="text-white">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </div>
+        </ul>
+    {% endif %}
+{% endblock %}

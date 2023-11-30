@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Главная страница{% endblock %}
+
+
+{% block content %}
+<h1>Это главная страница</h1>
+  <div class="row">
+    {% for item in items %}
+      {% include "includes/item_card.html" %}
+    {% endfor %}
+  </div>
+{% endblock %}
